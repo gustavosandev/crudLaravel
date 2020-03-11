@@ -12,7 +12,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-      $cursos = Curso::all();
+      $cursos = Curso::paginate(2); // all
       return view('home',compact('cursos'));
     }
 }
